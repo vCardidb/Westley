@@ -37,7 +37,7 @@
             padding: 20px;
             background: #f5f8fc;
             border-radius: 16px;
-            min-height: 250px;
+            min-height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -45,7 +45,7 @@
         }
         
         .logo-container img {
-            transform: scale(3.0);
+            transform: scale(2.5);  /* 250% Zoom */
             max-width: 100%;
             max-height: 100%;
             width: auto;
@@ -202,10 +202,10 @@
                 font-size: 1rem;
             }
             .logo-container {
-                min-height: 220px;
+                min-height: 200px;
             }
             .logo-container img {
-                transform: scale(2.5);
+                transform: scale(2.2);  /* 220% auf mobil */
             }
         }
     </style>
@@ -213,7 +213,7 @@
 <body>
     <div class="card">
         <div class="logo-container">
-            <!-- Gleiches Logo mit 300% Zoom -->
+            <!-- Logo mit 250% Zoom -->
             <img src="levata-logo.jpg" alt="Levata" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
             
             <!-- Fallback falls Logo nicht geladen werden kann -->
