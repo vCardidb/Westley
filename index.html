@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westley Pannell | Levata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c4050 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            padding: 45px 40px;
+            border-radius: 24px;
+            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border-top: 5px solid #0056a7;
+        }
+        
+        .logo-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f5f8fc;
+            border-radius: 16px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .logo-container img {
+            transform: scale(3.0);
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            object-fit: contain;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #1a2a3a;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            font-family: 'Georgia', serif;
+        }
+        
+        .title {
+            font-size: 1.3rem;
+            color: #0056a7;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-size: 1.2rem;
+            color: #4a6782;
+            font-weight: 400;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e5eef5;
+        }
+        
+        .detail {
+            margin: 30px 0;
+            text-align: left;
+            background: #f5f8fc;
+            padding: 25px;
+            border-radius: 16px;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 18px 0;
+            font-size: 1.1rem;
+        }
+        
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 18px;
+            min-width: 40px;
+            text-align: center;
+            color: #0056a7;
+        }
+        
+        .text {
+            color: #2c4050;
+            word-break: break-word;
+            line-height: 1.4;
+        }
+        
+        .label {
+            font-weight: 600;
+            color: #0056a7;
+            margin-right: 8px;
+            min-width: 50px;
+        }
+        
+        .email {
+            color: #0056a7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .email:hover {
+            text-decoration: underline;
+        }
+        
+        .address {
+            line-height: 1.5;
+        }
+        
+        .website {
+            text-align: center;
+            margin: 25px 0 30px;
+        }
+        
+        .website a {
+            color: #0056a7;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #cde1f0;
+            padding-bottom: 4px;
+        }
+        
+        .website a:hover {
+            border-bottom-color: #0056a7;
+        }
+        
+        .vcard-button {
+            display: inline-block;
+            background: #0056a7;
+            color: white;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 5px 0 15px;
+            box-shadow: 0 6px 14px rgba(0, 86, 167, 0.25);
+            transition: all 0.2s;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+        
+        .vcard-button:hover {
+            background: #003d7a;
+            box-shadow: 0 8px 18px rgba(0, 86, 167, 0.35);
+            transform: translateY(-2px);
+        }
+        
+        .vcard-button:active {
+            transform: translateY(0);
+        }
+        
+        .hint {
+            color: #6f8fa0;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        
+        .location {
+            font-weight: 600;
+            color: #1a2a3a;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .name {
+                font-size: 2rem;
+            }
+            .title {
+                font-size: 1.1rem;
+            }
+            .logo-container {
+                min-height: 220px;
+            }
+            .logo-container img {
+                transform: scale(2.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo-container">
+            <!-- Gleiches Logo wie bei Andrew -->
+            <img src="levata-logo.jpg" alt="Levata" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+            
+            <!-- Fallback falls Logo nicht geladen werden kann -->
+            <div id="fallback-logo" style="display: none; font-size: 2.2rem; font-weight: 600; color: #0056a7; letter-spacing: 1px;">
+                levata
+            </div>
+        </div>
+        
+        <h1 class="name">Westley Pannell</h1>
+        <div class="title">European Sales Director</div>
+        <div class="company">Levata UK Head Office</div>
+        
+        <div class="detail">
+            <div class="detail-item">
+                <span class="emoji">📞</span>
+                <span class="text">
+                    <span class="label">T:</span> +46 731 503 481
+                </span>
+            </div>
+            <div class="detail-item">
+                <span class="emoji">✉️</span>
+                <span class="text">
+                    <span class="label">M:</span> 
+                    <a href="mailto:wpannell@trade-id.co.uk" class="email">wpannell@trade-id.co.uk</a>
+                </span>
+            </div>
+            <div class="detail-item">
+                <span class="emoji">📍</span>
+                <span class="text address">
+                    <span class="label">UK Office:</span><br>
+                    Highbank Court, 3 High Bank Side<br>
+                    Stockport, SK1 1HG, UK
+                </span>
+            </div>
+        </div>
+        
+        <div class="website">
+            <a href="https://www.levata.com" target="_blank">www.levata.com</a>
+        </div>
+        
+        <a href="Westley.vcf" class="vcard-button" rel="noopener noreferrer">
+            ⬇️ Save Contact (vCard)
+        </a>
+        
+        <div class="hint">
+            Click to save Westley's contact details to your device
+        </div>
+        
+        <div class="location">
+            European Sales Director • Levata
+        </div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            var img = document.querySelector('.logo-container img');
+            if (img && img.complete && img.naturalHeight === 0) {
+                img.style.display = 'none';
+                document.getElementById('fallback-logo').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
